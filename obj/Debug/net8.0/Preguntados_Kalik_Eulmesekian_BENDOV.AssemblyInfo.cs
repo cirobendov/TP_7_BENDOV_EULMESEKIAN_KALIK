@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Preguntados_Kalik_Eulmesekian_BENDOV")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd81eb27f2b3e0b1877a76a5a661411ed19bbfad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e12514315152c90d893538521053bfcea4c43041")]
 [assembly: System.Reflection.AssemblyProductAttribute("Preguntados_Kalik_Eulmesekian_BENDOV")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Preguntados_Kalik_Eulmesekian_BENDOV")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

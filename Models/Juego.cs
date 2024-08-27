@@ -6,26 +6,26 @@ public class Juego
     private static List<Pregunta>? preguntas{get; set;}
     private static List<Respuesta>? respuestas{get; set;}
 
-    public void InicializarJuego()
+    public static void InicializarJuego()
     {
         username = string.Empty;
         puntajeActual = 0;
         cantidadPreguntasCorrectas = 0;
     }
-    public List<Categoría> ObtenerCategorias()
+    public static List<Categoría> ObtenerCategorias()
     {
         return DB.ObtenerCategorias();
     }
-    public List<Dificulad> ObtenerDificultades()
+    public static List<Dificulad> ObtenerDificultades()
     {
         return DB.ObtenerDificultades();
     }
-    public void CargarPartida(string username, int dificultad, int categoria)
+    public static void CargarPartida(string username, int dificultad, int categoria)
     {
         preguntas = DB.ObtenerPreguntas(dificultad, categoria);
         respuestas = DB.ObtenerRespuestas(preguntas);
     }
-    public Pregunta ObtenerProximaPregunta()
+    public static Pregunta ObtenerProximaPregunta()
     {   
         Random rd = new Random();
         int pos = rd.Next(preguntas.Count + 1);
@@ -33,12 +33,27 @@ public class Juego
         preguntas.RemoveAt(pos);
         return prox;
     }
-    public List<Respuesta> ObtenerProximasRespuestas(int idPregunta)
+    public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta)
     {
         return DB.ObtenerRtasXPreg(idPregunta);
     }
-    public bool VerificarRespuesta(int idPregunta, int idRespuesta)
+    public static bool VerificarRespuesta(int idPregunta, int idRespuesta)
     {
-       
+       List<Respuesta> listaRtas = DB.ObtenerRtasXPreg(idPregunta);
+       bool esCorrecta = false;
+       int i = 0;
+       do
+       {
+            if(listaRtas[i].IdRespuesta == idRespuesta && listaRtas[i].Correcta == true)           
+            esCorrecta = true;       
+            i++;
+       } while (esCorrecta == false && i < listaRtas.Count);
+       if(esCorrecta)
+       {
+            cantidadPreguntasCorrectas++;
+            puntajeActual += 5;
+            preguntas.RemoveAt(i);
+       }
+       return esCorrecta;
     }
 }
