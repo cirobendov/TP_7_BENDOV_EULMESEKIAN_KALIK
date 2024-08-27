@@ -1,0 +1,34 @@
+ @{
+    ViewData["Title"] = "Configuracion";
+}
+ 
+ <section class="configuracion">
+
+        <h1>CONFIGURACION</h1>
+
+        <form action="ruleta.html">
+
+            <select class="form-select" aria-label="Default select example" required>
+                <option value="">Dificultad:</option>
+                <option class="opcion" value="1">One</option>
+                <option class="opcion" value="2">Two</option>
+                <option class="opcion" value="3">Three</option>
+            </select>
+
+            <select class="form-select" aria-label="Default select example" required>
+                <option value="">Categoría:</option>
+                <option class="opcion" value="1">One</option>
+                <option class="opcion" value="2">Two</option>
+                <option class="opcion" value="3">Three</option>
+            </select>
+
+            <div class="form-floating mb-3" >
+                <input required type="text" class="form-control" id="floatingInput-sizing-sm" placeholder="" autocomplete="off">
+                <label for="floatingInput">Username</label>
+            </div>
+            
+            <input class="btn btn-outline-light" type="submit" value="JUGAR">
+
+        </form>
+
+    </main>

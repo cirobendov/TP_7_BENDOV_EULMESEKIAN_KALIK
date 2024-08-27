@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Preguntados_Kalik_Eulmesekian_BENDOV.props" />
+</Project>
