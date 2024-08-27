@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\img\\fondo.png"
     },
     {
+      "Id": "C:\\Users\\48044168\\Downloads\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\roman-chiquito.png",
+      "PackagePath": "staticwebassets\\img\\roman-chiquito.png"
+    },
+    {
+      "Id": "C:\\Users\\48044168\\Downloads\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\js\\mouseIndex.js",
+      "PackagePath": "staticwebassets\\js\\mouseIndex.js"
+    },
+    {
       "Id": "C:\\Users\\48044168\\Downloads\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -71,7 +71,7 @@ body {
 
 }
 
-.menu button{
+.menu  button{
   margin-top: 3%;
   font-family: "Luckiest Guy", cursive;
   font-weight: 400;
@@ -88,11 +88,10 @@ body {
 
 
 /* -------------------------- CONFIGURACION  ------------------------*/
-.configuracion form{
+.configuracion .contenedor-config{
   margin-top: 10%
   
 }
-
 .configuracion form input{
   margin-top: 2%;
 }
@@ -109,8 +108,6 @@ body {
   font-style: normal;
   color: black;
 }
-
-
 
 .configuracion input[type="submit"]{
   width: 100%;
