@@ -17,6 +17,11 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    public IActionResult Juegardo()
+    {
+        return View("Jugar");
+    }
     public IActionResult ConfigurarJuego()
     {
         /*Juego.InicializarJuego();
@@ -34,15 +39,17 @@ public class HomeController : Controller
     {
         Juego.CargarPartida(username, dificultad, categoria);
         if(Juego.ObtenerProximaPregunta() != null)
-        return RedirectToAction("Jugar");
+            return RedirectToAction("Jugar");
         else 
-        return RedirectToAction("ConfigurarJuego");
+            return RedirectToAction("ConfigurarJuego"); 
+        
+        RedirectToAction("Jugar");
     }
     public IActionResult Jugar()
     {
         Pregunta pregunta = Juego.ObtenerProximaPregunta();
         if(pregunta == null)
-        return View("Fin");
+            return View("Fin");
         else
         {
             ViewBag.ListaRtas = Juego.ObtenerProximasRespuestas(pregunta.IdPregunta);
@@ -56,6 +63,7 @@ public class HomeController : Controller
         ViewBag.esCorrecta = Juego.VerificarRespuesta(idPregunta, idRespuesta);
         return View("Respuesta");
     }
+
     public IActionResult Privacy()
     {
         return View();

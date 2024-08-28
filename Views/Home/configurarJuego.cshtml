@@ -2,33 +2,36 @@
     ViewData["Title"] = "Configuracion";
 }
  
- <section class="configuracion">
+<section class="configuracion">
     <div class="contenedor-config">
         <h1>CONFIGURACION</h1>
 
-        <form action="ruleta.html">
-
-            <select class="form-select" aria-label="Default select example" required>
+        <form action='@Url.Action("Comenzar")'>
+            <select class="form-select" name="dificultad" aria-label="Default select example" required>
                 <option value="">Dificultad:</option>
-                <option class="opcion" value="1">One</option>
-                <option class="opcion" value="2">Two</option>
-                <option class="opcion" value="3">Three</option>
+                <option class="opcion" value=1>One</option>
+                <option class="opcion" value=2>Two</option>
+                <option class="opcion" value=3>Three</option>
             </select>
 
-            <select class="form-select" aria-label="Default select example" required>
+            <select class="form-select" name="categoria" aria-label="Default select example" required>
                 <option value="">Categoría:</option>
-                <option class="opcion" value="1">One</option>
-                <option class="opcion" value="2">Two</option>
-                <option class="opcion" value="3">Three</option>
+                
+                @* @foreach (Categoría cat in ViewVag.Categorias)
+                {
+                    <option class="opcion" value="@cat.Id">@cat.Nombre</option>
+                }     *@
+                <option class="opcion" value=1>One</option>
+                <option class="opcion" value=2>Two</option>
+                <option class="opcion" value=3>Three</option>
             </select>
 
             <div class="form-floating mb-3" >
-                <input required type="text" class="form-control" id="floatingInput-sizing-sm" placeholder="" autocomplete="off">
+                <input required type="text" name="username" class="form-control" id="floatingInput-sizing-sm" placeholder="" autocomplete="off">
                 <label for="floatingInput">Username</label>
             </div>
             
-            <input class="btn btn-outline-light" type="submit" value="JUGAR">
-
+            <input class="btn btn-outline-light" type="submit" value="COMENZAR">
         </form>
     </div>
-</main>
+</section>

@@ -149,7 +149,7 @@ body {
   max-height: 100vh;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 50%;
+  top: 40%;
   left: 50%;
   padding: 3em;
   border-radius: 1em;
@@ -213,4 +213,63 @@ body {
 .ruleta .container img{
   height: 20%;
   transform: rotate(-90deg);
+}
+
+
+
+/* -------------------- JUGAR ----------------------*/
+.jugar{
+  height: 100vh;
+  background-image: url(../img/fondo-jugar.jpg);
+  background-repeat: round;
+  display: flex;
+  flex-direction: column; 
+
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jugar h3{
+  position: absolute;
+  top: 4%;
+  left: 2%;
+  color: white;
+}
+.jugar h3:last-of-type{
+  position: absolute;
+  left: 86%;
+}
+
+.contenedor-preguntas{
+  margin: 0 auto;
+  margin-top: 4%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-pregunta{
+  width: 100%;
+  margin: 0;
+  
+}
+.pregunta{
+  display: flex;
+  justify-content: center;
+  height: 25%;
+  background-color: white;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.pregunta h2{
+  margin-top: 1%;
+}
+
+.img-pregunta img{
+  width: 100%;
+  max-height: 200px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
