@@ -19,24 +19,23 @@ public class HomeController : Controller
     }
     public IActionResult ConfigurarJuego()
     {
-        /*Juego.InicializarJuego();
+        Juego.InicializarJuego();
         ViewBag.Dificultades = Juego.ObtenerDificultades();
-        ViewBag.Categorias = Juego.ObtenerCategorias();*/
+        ViewBag.Categorias = Juego.ObtenerCategorias();
         return View();
     }
     public IActionResult Comenzar(string username, int dificultad, int categoria)
     {
         Juego.CargarPartida(username, dificultad, categoria);
         if(Juego.ObtenerProximaPregunta() != null)
-        RedirectToAction("Jugar");
+        return RedirectToAction("Jugar");
         else 
-        RedirectToAction("ConfigurarJuego");
-        return View();
+        return RedirectToAction("ConfigurarJuego");
     }
     public IActionResult Jugar()
     {
         Pregunta pregunta = Juego.ObtenerProximaPregunta();
-        if(pregunta != null)
+        if(pregunta == null)
         return View("Fin");
         else
         {
@@ -44,15 +43,17 @@ public class HomeController : Controller
             ViewBag.Enunciado = pregunta.Enunciado;
             ViewBag.Foto = pregunta.Foto;      
         }
-        return View();
+        return View("Jugar");
     }
-
-
+    public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta)
+    {
+        ViewBag.esCorrecta = Juego.VerificarRespuesta(idPregunta, idRespuesta);
+        return View("Respuesta");
+    }
     public IActionResult Privacy()
     {
         return View();
     }
-
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
