@@ -3,25 +3,28 @@ using Dapper;
 
 public class DB
 {
-    private static string _connectionString = @"Server=localhost; DataBase=TriviaGame; Trusted_Connection=true";
-    public static List<Categoría> ObtenerCategorias()
+    //private static string _connectionString = @"Server=localhost; DataBase=TriviaGame; Trusted_Connection=true";
+    private static string _connectionString =  @"Server=BANHODEMATEO\SQLEXPRESS;
+    DataBase=TP7;Trusted_Connection=True;";
+
+    public static List<Categoria> ObtenerCategorias()
     {
-        List<Categoría> _ListaCategorias = new List<Categoría>();
+        List<Categoria> _ListaCategorias = new List<Categoria>();
         using (SqlConnection db = new SqlConnection(_connectionString))
         {
             string sql = "SELECT * FROM Categorias";
-            _ListaCategorias = db.Query<Categoría>(sql).ToList();
+            _ListaCategorias = db.Query<Categoria>(sql).ToList();
         }
         return _ListaCategorias;
     }
 
-    public static List<Dificulad> ObtenerDificultades()
+    public static List<Dificultad> ObtenerDificultades()
     {
-        List<Dificulad> _ListaDificultades = new List<Dificulad>();
+        List<Dificultad> _ListaDificultades = new List<Dificultad>();
         using (SqlConnection db = new SqlConnection(_connectionString))
         {
             string sql = "SELECT * FROM Dificultades";
-            _ListaDificultades = db.Query<Dificulad>(sql).ToList();
+            _ListaDificultades = db.Query<Dificultad>(sql).ToList();
         }
         return _ListaDificultades;
     }

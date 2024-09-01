@@ -1,19 +1,35 @@
 <section class="jugar">
 
-    <h3>USERNAME</h3>
+    <h3>@ViewBag.Username</h3>
     <h3 class="puntos">POINTS: xxx </h3>
 
     <div class="contenedor-preguntas">
 
         <div class="card-pregunta">
             <div class="pregunta">
-                <h2>¿AASDA ASD ASD A SD AS D?</h2>
+                <h4>@ViewBag.Enunciado</h4>
             </div>
             <div class="img-pregunta">
-                <img src="../img/fondo.png" alt="">
+                <img src="@ViewBag.Foto" alt="">
             </div>
         </div>
+        
+        <div class="respuestas">
+            <form action="" method="post">
+                
+                @foreach (Respuesta resp in ViewBag.ListaRtas)
+                {
+                    <div class="opciones">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">@resp.Opcion </label>
+                        </div>
+                    </div>
+                }
+                
 
+            </form>
+        </div>
         
 
     </div>

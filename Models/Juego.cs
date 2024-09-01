@@ -1,7 +1,7 @@
 public class Juego
 {
-    private static string? username{get; set;}
-    private static int puntajeActual{get; set;}
+    public static string? username{get; set;}
+    static int puntajeActual{get; set;}
     private static int cantidadPreguntasCorrectas{get; set;}
     private static List<Pregunta>? preguntas{get; set;}
     private static List<Respuesta>? respuestas{get; set;}
@@ -12,23 +12,24 @@ public class Juego
         puntajeActual = 0;
         cantidadPreguntasCorrectas = 0;
     }
-    public static List<Categoría> ObtenerCategorias()
+    public static List<Categoria> ObtenerCategorias()
     {
         return DB.ObtenerCategorias();
     }
-    public static List<Dificulad> ObtenerDificultades()
+    public static List<Dificultad> ObtenerDificultades()
     {
         return DB.ObtenerDificultades();
     }
-    public static void CargarPartida(string username, int dificultad, int categoria)
-    {
+    public static void CargarPartida(string Username, int dificultad, int categoria)
+    {   
+        username = Username;
         preguntas = DB.ObtenerPreguntas(dificultad, categoria);
         respuestas = DB.ObtenerRespuestas(preguntas);
     }
     public static Pregunta ObtenerProximaPregunta()
     {   
         Random rd = new Random();
-        int pos = rd.Next(preguntas.Count + 1);
+        int pos = rd.Next(preguntas.Count);
         Pregunta? prox = preguntas[pos];
         preguntas.RemoveAt(pos);
         return prox;

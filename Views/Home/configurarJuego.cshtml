@@ -6,28 +6,26 @@
     <div class="contenedor-config">
         <h1>CONFIGURACION</h1>
 
-        <form action='@Url.Action("Comenzar")'>
+        <form action='@Url.Action("Comenzar")' method="post">
             <select class="form-select" name="dificultad" aria-label="Default select example" required>
                 <option value="">Dificultad:</option>
-                <option class="opcion" value=1>One</option>
-                <option class="opcion" value=2>Two</option>
-                <option class="opcion" value=3>Three</option>
+                @foreach(Dificultad dif in ViewBag.Dificultades)
+                {
+                    <option class="opcion" value="@dif.IdDificultad">@dif.Nombre</option>
+                }
             </select>
 
             <select class="form-select" name="categoria" aria-label="Default select example" required>
-                <option value="">Categoría:</option>
+                <option value="">Categoría:</option>     
                 
-                @* @foreach (Categoría cat in ViewVag.Categorias)
+                @foreach (Categoria cat in ViewBag.Categorias)
                 {
-                    <option class="opcion" value="@cat.Id">@cat.Nombre</option>
-                }     *@
-                <option class="opcion" value=1>One</option>
-                <option class="opcion" value=2>Two</option>
-                <option class="opcion" value=3>Three</option>
+                    <option class="opcion" value="@cat.IdCategoria">@cat.Nombre</option>
+                }
             </select>
 
             <div class="form-floating mb-3" >
-                <input required type="text" name="username" class="form-control" id="floatingInput-sizing-sm" placeholder="" autocomplete="off">
+                <input required type="text" name="Username" class="form-control" id="floatingInput-sizing-sm" placeholder="" autocomplete="off">
                 <label for="floatingInput">Username</label>
             </div>
             

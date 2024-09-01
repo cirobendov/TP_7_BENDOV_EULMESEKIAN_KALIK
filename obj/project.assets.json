@@ -505,19 +505,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\48044168\\.nuget\\packages\\": {}
+    "C:\\Users\\Mateo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\48044168\\Desktop\\TP_7_BENDOV_EULMESEKIAN_KALIK\\Preguntados_Kalik_Eulmesekian_BENDOV.csproj",
+      "projectUniqueName": "C:\\Users\\Mateo\\Desktop\\Programacion\\3er bim\\TP_7_BENDOV_EULMESEKIAN_KALIK\\Preguntados_Kalik_Eulmesekian_BENDOV.csproj",
       "projectName": "Preguntados_Kalik_Eulmesekian_BENDOV",
-      "projectPath": "C:\\Users\\48044168\\Desktop\\TP_7_BENDOV_EULMESEKIAN_KALIK\\Preguntados_Kalik_Eulmesekian_BENDOV.csproj",
-      "packagesPath": "C:\\Users\\48044168\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\48044168\\Desktop\\TP_7_BENDOV_EULMESEKIAN_KALIK\\obj\\",
+      "projectPath": "C:\\Users\\Mateo\\Desktop\\Programacion\\3er bim\\TP_7_BENDOV_EULMESEKIAN_KALIK\\Preguntados_Kalik_Eulmesekian_BENDOV.csproj",
+      "packagesPath": "C:\\Users\\Mateo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mateo\\Desktop\\Programacion\\3er bim\\TP_7_BENDOV_EULMESEKIAN_KALIK\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\48044168\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Mateo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

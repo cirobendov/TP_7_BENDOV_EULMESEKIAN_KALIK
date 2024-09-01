@@ -24,9 +24,9 @@ public class HomeController : Controller
     }
     public IActionResult ConfigurarJuego()
     {
-        /*Juego.InicializarJuego();
+        Juego.InicializarJuego();
         ViewBag.Dificultades = Juego.ObtenerDificultades();
-        ViewBag.Categorias = Juego.ObtenerCategorias();*/
+        ViewBag.Categorias = Juego.ObtenerCategorias();
         return View();
     }
 
@@ -35,9 +35,10 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Comenzar(string username, int dificultad, int categoria)
+    [HttpPost]
+    public IActionResult Comenzar(string Username, int dificultad, int categoria)
     {
-        Juego.CargarPartida(username, dificultad, categoria);
+        Juego.CargarPartida(Username, dificultad, categoria);
         if(Juego.ObtenerProximaPregunta() != null)
             return RedirectToAction("Jugar");
         else 
@@ -52,6 +53,7 @@ public class HomeController : Controller
             return View("Fin");
         else
         {
+            ViewBag.Username = Juego.username;
             ViewBag.ListaRtas = Juego.ObtenerProximasRespuestas(pregunta.IdPregunta);
             ViewBag.Enunciado = pregunta.Enunciado;
             ViewBag.Foto = pregunta.Foto;      
