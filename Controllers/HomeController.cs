@@ -54,6 +54,7 @@ public class HomeController : Controller
         else
         {
             ViewBag.Username = Juego.username;
+            ViewBag.Puntos = Juego.puntajeActual;
             ViewBag.ListaRtas = Juego.ObtenerProximasRespuestas(pregunta.IdPregunta);
             ViewBag.Enunciado = pregunta.Enunciado;
             ViewBag.Foto = pregunta.Foto;      

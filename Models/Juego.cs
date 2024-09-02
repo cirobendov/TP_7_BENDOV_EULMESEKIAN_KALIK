@@ -1,7 +1,7 @@
 public class Juego
 {
     public static string? username{get; set;}
-    static int puntajeActual{get; set;}
+    public static int? puntajeActual{get; set;}
     private static int cantidadPreguntasCorrectas{get; set;}
     private static List<Pregunta>? preguntas{get; set;}
     private static List<Respuesta>? respuestas{get; set;}
@@ -30,7 +30,7 @@ public class Juego
     {   
         Random rd = new Random();
         int pos = rd.Next(preguntas.Count);
-        Pregunta? prox = preguntas[pos];
+        Pregunta? prox = preguntas[pos +1];
         preguntas.RemoveAt(pos);
         return prox;
     }
