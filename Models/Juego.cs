@@ -29,9 +29,8 @@ public class Juego
     public static Pregunta ObtenerProximaPregunta()
     {   
         Random rd = new Random();
-        int pos = rd.Next(preguntas.Count);
-        Pregunta? prox = preguntas[pos +1];
-        preguntas.RemoveAt(pos);
+        int pos = rd.Next(0, preguntas.Count);
+        Pregunta? prox = preguntas[pos];
         return prox;
     }
     public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta)

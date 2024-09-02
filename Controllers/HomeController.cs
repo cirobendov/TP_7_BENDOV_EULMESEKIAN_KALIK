@@ -40,11 +40,9 @@ public class HomeController : Controller
     {
         Juego.CargarPartida(Username, dificultad, categoria);
         if(Juego.ObtenerProximaPregunta() != null)
-            return RedirectToAction("Jugar");
+            return RedirectToAction("Jugar");       
         else 
-            return RedirectToAction("ConfigurarJuego"); 
-        
-        RedirectToAction("Jugar");
+            return RedirectToAction("ConfigurarJuego");     
     }
     public IActionResult Jugar()
     {

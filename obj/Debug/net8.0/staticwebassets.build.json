@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7J80BEw7TwccZw0U35nKJUEI8Gc/9mfvknotSBjblZs=",
+  "Hash": "nV5Kvw/Tu0zHbzBki6Cioxh9uzUTEKpPavprRXQ9pX4=",
   "Source": "Preguntados_Kalik_Eulmesekian_BENDOV",
   "BasePath": "_content/Preguntados_Kalik_Eulmesekian_BENDOV",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\libertadores.png"
+    },
+    {
+      "Identity": "C:\\Users\\48044168\\Desktop\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\pickle.png",
+      "SourceId": "Preguntados_Kalik_Eulmesekian_BENDOV",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\48044168\\Desktop\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\",
+      "BasePath": "_content/Preguntados_Kalik_Eulmesekian_BENDOV",
+      "RelativePath": "img/pickle.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\pickle.png"
     },
     {
       "Identity": "C:\\Users\\48044168\\Desktop\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\roman-chiquito.png",

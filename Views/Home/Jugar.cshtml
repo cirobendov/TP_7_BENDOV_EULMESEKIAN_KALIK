@@ -10,7 +10,7 @@
                 <h4>@ViewBag.Enunciado👌</h4>
             </div>
             <div class="img-pregunta">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmEPlOS0msqxCqzzlVHylv67KLMRq_4Df6ZQ&s" alt="">
+                <img src=@ViewBag.Foto alt="">
             </div>
         </div>
         
@@ -23,14 +23,14 @@
                         <div class="opciones">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">@ViewBag.ListaRtas[i]</label>
+                                <label class="form-check-label" for="exampleRadios1">@ViewBag.ListaRtas[i].Contenido</label>
                             </div>
                         </div>
                     
                         <div class="opciones">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">@ViewBag.ListaRtas[i + 1]</label>
+                                <label class="form-check-label" for="exampleRadios1">@ViewBag.ListaRtas[i + 1].Contenido</label>
                             </div>
                         </div>
 
