@@ -50,7 +50,13 @@ public class HomeController : Controller
     {
         Pregunta pregunta = Juego.ObtenerProximaPregunta();
         if(pregunta == null)
+        {
             return View("Fin");
+            Puntajes.Puntaje += Juego.PuntajeActual;
+            Puntajes.Username = Juego.Username;
+            Puntajes.FechaHora = DateTime.Now;
+        }
+            
         else
         {
             ViewBag.Username = Juego.username;
@@ -64,6 +70,10 @@ public class HomeController : Controller
     {
         ViewBag.esCorrecta = Juego.VerificarRespuesta(idPregunta, idRespuesta);
         return View("Respuesta");
+    }
+    public IActionResult HighScores()
+    {
+        
     }
 
     public IActionResult Privacy()

@@ -72,4 +72,21 @@ public class DB
         }
         return _ListaRespuestasXPreg;
     }
+    public static List<Puntajes> ObtenerPuntajes()
+    {
+        List<Puntajes> _ListaPuntajes = new List<Puntajes>();
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {           
+            string sql = "SELECT * FROM Puntajes ORDER BY Puntaje ASC";
+            _ListaPuntajes = db.Query<Puntajes>(sql).ToList();
+        }
+        return _ListaPuntajes;
+    }
+    public static void InsertarPuntajes(string username, int puntaje, DateTime fechahora)
+    {
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {           
+            string sql = "INSERT INTO Puntajes (Username)";
+        }
+    }
 }

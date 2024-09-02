@@ -1,7 +1,7 @@
 public class Juego
 {
-    public static string? username{get; set;}
-    static int puntajeActual{get; set;}
+    public static string? Username{get; set;}
+    public static int PuntajeActual{get; set;}
     private static int cantidadPreguntasCorrectas{get; set;}
     private static List<Pregunta>? preguntas{get; set;}
     private static List<Respuesta>? respuestas{get; set;}
@@ -9,7 +9,7 @@ public class Juego
     public static void InicializarJuego()
     {
         username = string.Empty;
-        puntajeActual = 0;
+        PuntajeActual = 0;
         cantidadPreguntasCorrectas = 0;
     }
     public static List<Categoria> ObtenerCategorias()
@@ -52,7 +52,7 @@ public class Juego
        if(esCorrecta)
        {
             cantidadPreguntasCorrectas++;
-            puntajeActual += 5;
+            PuntajeActual += 5;
             preguntas.RemoveAt(i);
        }
        return esCorrecta;
