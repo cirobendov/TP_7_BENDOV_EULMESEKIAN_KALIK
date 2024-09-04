@@ -257,7 +257,7 @@ body {
 .pregunta{
   display: flex;
   justify-content: center;
-  height: 100%;
+  height: 15%;
   background-color: white;
   text-align: center;
   border-top-left-radius: 10px;
@@ -268,8 +268,31 @@ body {
 }
 
 .img-pregunta img{
-  max-width: 100%;
-  max-height: 200px;
+  width: 100%;
+  max-height: 400px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.jugar .respuestas{
+  margin-top: 3%;
+}
+
+.contenedor-opciones{
+  margin-top: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.opciones{
+  margin-top: 1%;
+  background-color: white;
+  width: 45%;
+  height: 50px; 
+  border-radius: 10px;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items: center;
 }
