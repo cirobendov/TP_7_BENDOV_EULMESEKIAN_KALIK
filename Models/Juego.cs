@@ -57,4 +57,12 @@ public class Juego
        }
        return esCorrecta;
     }
+    public static void RegistrarJuego(string usname, int pts, DateTime fh)
+    {
+        DB.InsertarPuntajes(usname, pts, fh);        
+    }
+    public static List<Puntajes> ObtenerPuntajes()
+    {
+        return DB.ObtenerPuntajes();
+    }
 }

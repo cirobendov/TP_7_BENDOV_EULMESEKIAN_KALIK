@@ -86,7 +86,8 @@ public class DB
     {
         using (SqlConnection db = new SqlConnection(_connectionString))
         {           
-            string sql = "INSERT INTO Puntajes (Username)";
+            string sql = "INSERT INTO Puntajes (Username, Puntaje, FechaHora) VALUES (@pUsername, @pPuntaes, @pFechaHora)";
+            db.Query<Respuesta>(sql, new {pUsername = username, pPuntaje = puntaje, pFechaHora = fechahora});
         }
     }
 }

@@ -51,12 +51,9 @@ public class HomeController : Controller
         Pregunta pregunta = Juego.ObtenerProximaPregunta();
         if(pregunta == null)
         {
+            Juego.RegistrarJuego(Juego.Username, Juego.PuntajeActual, DateTime.Now);
             return View("Fin");
-            Puntajes.Puntaje += Juego.PuntajeActual;
-            Puntajes.Username = Juego.Username;
-            Puntajes.FechaHora = DateTime.Now;
-        }
-            
+        }          
         else
         {
             ViewBag.Username = Juego.username;
@@ -73,7 +70,8 @@ public class HomeController : Controller
     }
     public IActionResult HighScores()
     {
-        
+        ViewBag.ListaHighScores = Juego.ObtenerPuntajes();
+        return View();
     }
 
     public IActionResult Privacy()
