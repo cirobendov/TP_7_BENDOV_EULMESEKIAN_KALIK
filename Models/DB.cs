@@ -89,4 +89,12 @@ public class DB
             db.Query<Respuesta>(sql, new {pUsername = username, pPuntaje = puntaje, pFechaHora = fechahora});
         }
     }
+    public static void CrearPregunta(string cat, string dif, string enunciado, string foto)
+    {
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {           
+            string sql = "INSERT INTO Preguntas (Categoria, Dificultad, Enunciado, Foto) VALUES (@pcat, @pdif, @penunciado, @pfoto)";
+            db.Query<Respuesta>(sql, new {@pcat = cat, pdif = dif, penunciado = enunciado, pfoto = foto});
+        }
+    }
 }

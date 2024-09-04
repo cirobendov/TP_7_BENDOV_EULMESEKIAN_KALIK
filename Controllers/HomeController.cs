@@ -69,7 +69,7 @@ public class HomeController : Controller
     }
     public IActionResult HighScores()
     {
-        ViewBag.ListaHighScores = Juego.ObtenerPuntajes();
+        ViewBag.ListaHighScores = DB.ObtenerPuntajes();
         return View();
     }
 

@@ -60,8 +60,4 @@ public class Juego
     {
         DB.InsertarPuntajes(usname, pts, fh);        
     }
-    public static List<Puntajes> ObtenerPuntajes()
-    {
-        return DB.ObtenerPuntajes();
-    }
 }
