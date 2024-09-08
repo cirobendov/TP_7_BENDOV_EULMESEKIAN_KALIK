@@ -8,7 +8,7 @@ public class Juego
 
     public static void InicializarJuego()
     {
-        username = string.Empty;
+        Username = string.Empty;
         PuntajeActual = 0;
         cantidadPreguntasCorrectas = 0;
     }
@@ -20,9 +20,9 @@ public class Juego
     {
         return DB.ObtenerDificultades();
     }
-    public static void CargarPartida(string Username, int dificultad, int categoria)
+    public static void CargarPartida(string username, int dificultad, int categoria)
     {   
-        username = Username;
+        Username = username;
         preguntas = DB.ObtenerPreguntas(dificultad, categoria);
         respuestas = DB.ObtenerRespuestas(preguntas);
     }
@@ -48,11 +48,12 @@ public class Juego
             esCorrecta = true;       
             i++;
        } while (esCorrecta == false && i < listaRtas.Count);
+
        if(esCorrecta)
        {
             cantidadPreguntasCorrectas++;
             PuntajeActual += 5;
-            preguntas.RemoveAt(i);
+            preguntas.RemoveAt(idPregunta -1);
        }
        return esCorrecta;
     }

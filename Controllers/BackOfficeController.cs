@@ -6,9 +6,9 @@ namespace Preguntados_Kalik_Eulmesekian_BENDOV.Controllers;
 
 public class BackOficceController : Controller
 {
-    public IActionResult CrearPregunta(string cat, string dif, string en, string foto)
-    {
-        DB.CrearPregunta(cat, dif, en, foto);
-        RedirectToAction("Respuestas");
-    }
+    //public IActionResult CrearPregunta(string cat, string dif, string en, string foto)
+    //{
+      //  DB.CrearPregunta(cat, dif, en, foto);
+      //  RedirectToAction("Respuestas");
+    //}
 }

@@ -3,8 +3,8 @@ using Dapper;
 
 public class DB
 {
-    private static string _connectionString = @"Server=localhost; DataBase=TP7; Trusted_Connection=true";
-    //private static string _connectionString =  @"Server=BANHODEMATEO\SQLEXPRESS;DataBase=TP7;Trusted_Connection=True;";
+    //private static string _connectionString = @"Server=localhost; DataBase=TP7; Trusted_Connection=true";
+    private static string _connectionString =  @"Server=BANGHODEMATEO\SQLEXPRESS;DataBase=TP7;Trusted_Connection=True;";
 
     public static List<Categoria> ObtenerCategorias()
     {

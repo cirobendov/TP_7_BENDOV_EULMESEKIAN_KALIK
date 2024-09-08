@@ -18,10 +18,6 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Juegardo()
-    {
-        return View("Jugar");
-    }
     public IActionResult ConfigurarJuego()
     {
         Juego.InicializarJuego();
@@ -54,11 +50,11 @@ public class HomeController : Controller
         }          
         else
         {
-            ViewBag.Username = Juego.username;
-            ViewBag.Puntos = Juego.puntajeActual;
+            ViewBag.Username = Juego.Username;
+            ViewBag.Puntos = Juego.PuntajeActual;
             ViewBag.ListaRtas = Juego.ObtenerProximasRespuestas(pregunta.IdPregunta);
-            ViewBag.Enunciado = pregunta.Enunciado;
-            ViewBag.Foto = pregunta.Foto;      
+            ViewBag.Preguntas = pregunta;
+   
         }
         return View("Jugar");
     }
