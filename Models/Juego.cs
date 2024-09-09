@@ -42,6 +42,7 @@ public class Juego
        List<Respuesta> listaRtas = DB.ObtenerRtasXPreg(idPregunta);
        bool esCorrecta = false;
        int i = 0;
+       int indice = 0;
        do
        {
             if(listaRtas[i].IdRespuesta == idRespuesta && listaRtas[i].Correcta == true)           
@@ -49,11 +50,19 @@ public class Juego
             i++;
        } while (esCorrecta == false && i < listaRtas.Count);
 
+        for(int a = 0; a<preguntas.Count ;a++)
+        {
+            if (preguntas[a].IdPregunta == idPregunta)
+            {
+                indice = a;   
+            }
+        }
+
        if(esCorrecta)
        {
             cantidadPreguntasCorrectas++;
             PuntajeActual += 5;
-            preguntas.RemoveAt(idPregunta);
+            preguntas.RemoveAt(indice);
        }
        return esCorrecta;
     }

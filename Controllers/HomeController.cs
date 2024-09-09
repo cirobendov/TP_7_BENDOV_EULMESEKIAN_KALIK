@@ -58,9 +58,18 @@ public class HomeController : Controller
     }
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta)
     {
-        ViewBag.esCorrecta = Juego.VerificarRespuesta(idPregunta, idRespuesta);
-        return View("Respuesta");
+        bool esCorrecta = Juego.VerificarRespuesta(idPregunta, idRespuesta);
+        return RedirectToAction("Respuesta", new{correcta = esCorrecta});
     }
+
+    public IActionResult Respuesta(bool correcta)
+    {
+        ViewBag.esCorrecta = correcta;
+        ViewBag.Username = Juego.Username;
+        ViewBag.Puntos = Juego.PuntajeActual;
+        return View();
+    }
+
     /*public IActionResult HighScores()
     {
         ViewBag.ListaHighScores = DB.ObtenerPuntajes();

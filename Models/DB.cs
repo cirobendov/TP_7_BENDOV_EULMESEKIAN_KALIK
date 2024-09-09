@@ -36,11 +36,11 @@ public class DB
         {  if(dificultad == -1 && categoria != -1)
                 sql = "SELECT * FROM Preguntas WHERE IdCategoria = @pcategoria";
             else if(dificultad != -1 && categoria == -1)
-                sql = "SELECT * FROM Preguntas WHERE IdDificultad = @pdificultad ";
+                sql = "SELECT * FROM Preguntas WHERE IdDificultad = @pdificultad";
             else if(dificultad == -1 && categoria == -1)
                 sql = "SELECT * FROM Preguntas";
             else
-                sql = "SELECT * FROM Preguntas WHERE IdCategoria = @pcategoria AND IdDificultad = @pdificultad ";
+                sql = "SELECT * FROM Preguntas WHERE IdCategoria = @pcategoria AND IdDificultad = @pdificultad";
                 _ListaPreguntas = db.Query<Pregunta>(sql, new {pcategoria = categoria, pdificultad = dificultad}).ToList();
         }
         return _ListaPreguntas;
