@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "456I8YaxBlyIaYSfcHIOeX3lBCtxFENcZ4JY9ncF3qQ=",
+  "Hash": "ft8YQwR2HBfZWPV67pNGaKKkMw/6xkoE2zTdchfDues=",
   "Source": "Preguntados_Kalik_Eulmesekian_BENDOV",
   "BasePath": "_content/Preguntados_Kalik_Eulmesekian_BENDOV",
   "Mode": "Default",
@@ -93,6 +93,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\correcta.jpg",
+      "SourceId": "Preguntados_Kalik_Eulmesekian_BENDOV",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\",
+      "BasePath": "_content/Preguntados_Kalik_Eulmesekian_BENDOV",
+      "RelativePath": "img/correcta.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\correcta.jpg"
+    },
+    {
       "Identity": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\fondo-jugar.jpg",
       "SourceId": "Preguntados_Kalik_Eulmesekian_BENDOV",
       "SourceType": "Discovered",
@@ -129,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\fondo.png"
+    },
+    {
+      "Identity": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\incorrecto.jpg",
+      "SourceId": "Preguntados_Kalik_Eulmesekian_BENDOV",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\",
+      "BasePath": "_content/Preguntados_Kalik_Eulmesekian_BENDOV",
+      "RelativePath": "img/incorrecto.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\incorrecto.jpg"
     },
     {
       "Identity": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\libertadores.png",
@@ -205,25 +243,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\mouseIndex.js"
-    },
-    {
-      "Identity": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\js\\ruleta.js",
-      "SourceId": "Preguntados_Kalik_Eulmesekian_BENDOV",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\",
-      "BasePath": "_content/Preguntados_Kalik_Eulmesekian_BENDOV",
-      "RelativePath": "js/ruleta.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\ruleta.js"
     },
     {
       "Identity": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\js\\site.js",

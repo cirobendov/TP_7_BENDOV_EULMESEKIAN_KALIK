@@ -13,12 +13,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\correcta.jpg",
+      "PackagePath": "staticwebassets\\img\\correcta.jpg"
+    },
+    {
       "Id": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\fondo-jugar.jpg",
       "PackagePath": "staticwebassets\\img\\fondo-jugar.jpg"
     },
     {
       "Id": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\fondo.png",
       "PackagePath": "staticwebassets\\img\\fondo.png"
+    },
+    {
+      "Id": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\incorrecto.jpg",
+      "PackagePath": "staticwebassets\\img\\incorrecto.jpg"
     },
     {
       "Id": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\libertadores.png",
@@ -35,10 +43,6 @@
     {
       "Id": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\js\\mouseIndex.js",
       "PackagePath": "staticwebassets\\js\\mouseIndex.js"
-    },
-    {
-      "Id": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\js\\ruleta.js",
-      "PackagePath": "staticwebassets\\js\\ruleta.js"
     },
     {
       "Id": "C:\\Users\\48111117\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\js\\site.js",

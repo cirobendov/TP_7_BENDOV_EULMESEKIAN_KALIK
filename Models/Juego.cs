@@ -27,11 +27,15 @@ public class Juego
         respuestas = DB.ObtenerRespuestas(preguntas);
     }
     public static Pregunta ObtenerProximaPregunta()
-    {   
-        Random rd = new Random();
-        int pos = rd.Next(0, preguntas.Count);
-        Pregunta? prox = preguntas[pos];
-        return prox;
+    {   if(preguntas.Count > 0)
+        {
+            Random rd = new Random();
+            int pos = rd.Next(0, preguntas.Count);
+            Pregunta prox = preguntas[pos];
+            return prox;
+        }
+        else 
+            return null;
     }
     public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta)
     {
@@ -49,19 +53,18 @@ public class Juego
             esCorrecta = true;       
             i++;
        } while (esCorrecta == false && i < listaRtas.Count);
-
-        for(int a = 0; a<preguntas.Count ;a++)
-        {
-            if (preguntas[a].IdPregunta == idPregunta)
-            {
-                indice = a;   
-            }
-        }
-
        if(esCorrecta)
        {
             cantidadPreguntasCorrectas++;
             PuntajeActual += 5;
+            
+            for(int a = 0; a < preguntas.Count ;a++)
+            {
+                if (preguntas[a].IdPregunta == idPregunta)
+                {
+                    indice = a;
+                }
+            } 
             preguntas.RemoveAt(indice);
        }
        return esCorrecta;

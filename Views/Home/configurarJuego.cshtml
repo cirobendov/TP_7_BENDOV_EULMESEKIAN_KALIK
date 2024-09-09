@@ -8,7 +8,8 @@
 
         <form action='@Url.Action("Comenzar")' method="post">
             <select class="form-select" name="dificultad" aria-label="Default select example" required>
-                <option value="-1">Dificultad:</option>
+                <option value="">Dificultad:</option>
+                <option value="-1">Cualquiera</option>
                 @foreach(Dificultad dif in ViewBag.Dificultades)
                 {
                     <option class="opcion" value="@dif.IdDificultad">@dif.Nombre</option>
@@ -16,8 +17,8 @@
             </select>
 
             <select class="form-select" name="categoria" aria-label="Default select example" required>
-                <option value="-1">Categoría:</option>     
-                
+                <option value="">Categoría:</option>   
+                <option value="-1">Cualquiera</option>     
                 @foreach (Categoria cat in ViewBag.Categorias)
                 {
                     <option class="opcion" value="@cat.IdCategoria">@cat.Nombre</option>

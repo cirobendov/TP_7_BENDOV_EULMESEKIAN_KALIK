@@ -29,6 +29,7 @@ public class HomeController : Controller
     {
         return View();
     }
+    
     [HttpPost]
     public IActionResult Comenzar(string Username, int dificultad, int categoria)
     {
@@ -52,7 +53,6 @@ public class HomeController : Controller
             ViewBag.Puntos = Juego.PuntajeActual;
             ViewBag.ListaRtas = Juego.ObtenerProximasRespuestas(pregunta.IdPregunta);
             ViewBag.Preguntas = pregunta;
-   
         }
         return View("Jugar");
     }
