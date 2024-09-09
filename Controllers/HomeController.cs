@@ -25,12 +25,10 @@ public class HomeController : Controller
         ViewBag.Categorias = Juego.ObtenerCategorias();
         return View();
     }
-
     public IActionResult Ruleta ()
     {
         return View();
     }
-
     [HttpPost]
     public IActionResult Comenzar(string Username, int dificultad, int categoria)
     {
@@ -45,7 +43,7 @@ public class HomeController : Controller
         Pregunta pregunta = Juego.ObtenerProximaPregunta();
         if(pregunta == null)
         {
-            Juego.RegistrarJuego(Juego.Username, Juego.PuntajeActual, DateTime.Now);
+           // Juego.RegistrarJuego(Juego.Username, Juego.PuntajeActual, DateTime.Now);
             return View("Fin");
         }          
         else
@@ -63,11 +61,12 @@ public class HomeController : Controller
         ViewBag.esCorrecta = Juego.VerificarRespuesta(idPregunta, idRespuesta);
         return View("Respuesta");
     }
-    public IActionResult HighScores()
+    /*public IActionResult HighScores()
     {
         ViewBag.ListaHighScores = DB.ObtenerPuntajes();
         return View();
     }
+    */
 
     public IActionResult Privacy()
     {

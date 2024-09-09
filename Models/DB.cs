@@ -3,8 +3,8 @@ using Dapper;
 
 public class DB
 {
-    //private static string _connectionString = @"Server=localhost; DataBase=TP7; Trusted_Connection=true";
-    private static string _connectionString =  @"Server=BANGHODEMATEO\SQLEXPRESS;DataBase=TP7;Trusted_Connection=True;";
+    private static string _connectionString = @"Server=localhost; DataBase=TP7; Trusted_Connection=true";
+    //private static string _connectionString =  @"Server=BANGHODEMATEO\SQLEXPRESS;DataBase=TP7;Trusted_Connection=True;";
 
     public static List<Categoria> ObtenerCategorias()
     {
@@ -81,7 +81,7 @@ public class DB
         }
         return _ListaPuntajes;
     }
-    public static void InsertarPuntajes(string username, int puntaje, DateTime fechahora)
+    /*public static void InsertarPuntajes(string username, int puntaje, DateTime fechahora)
     {
         using (SqlConnection db = new SqlConnection(_connectionString))
         {           
@@ -89,12 +89,5 @@ public class DB
             db.Query<Respuesta>(sql, new {pUsername = username, pPuntaje = puntaje, pFechaHora = fechahora});
         }
     }
-    public static void CrearPregunta(string cat, string dif, string enunciado, string foto)
-    {
-        using (SqlConnection db = new SqlConnection(_connectionString))
-        {           
-            string sql = "INSERT INTO Preguntas (Categoria, Dificultad, Enunciado, Foto) VALUES (@pcat, @pdif, @penunciado, @pfoto)";
-            db.Query<Respuesta>(sql, new {@pcat = cat, pdif = dif, penunciado = enunciado, pfoto = foto});
-        }
-    }
+    */
 }

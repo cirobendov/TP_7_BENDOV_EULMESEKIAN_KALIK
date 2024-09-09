@@ -53,12 +53,13 @@ public class Juego
        {
             cantidadPreguntasCorrectas++;
             PuntajeActual += 5;
-            preguntas.RemoveAt(idPregunta -1);
+            preguntas.RemoveAt(idPregunta);
        }
        return esCorrecta;
     }
-    public static void RegistrarJuego(string usname, int pts, DateTime fh)
+   /* public static void RegistrarJuego(string usname, int pts, DateTime fh)
     {
         DB.InsertarPuntajes(usname, pts, fh);        
     }
+    */
 }
