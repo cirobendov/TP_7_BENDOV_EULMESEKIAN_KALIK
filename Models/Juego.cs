@@ -1,3 +1,4 @@
+using Preguntados_Kalik_Eulmesekian_BENDOV.Models;
 public class Juego
 {
     public static string? Username{get; set;}
@@ -46,7 +47,6 @@ public class Juego
        List<Respuesta> listaRtas = DB.ObtenerRtasXPreg(idPregunta);
        bool esCorrecta = false;
        int i = 0;
-       int indice = 0;
        do
        {
             if(listaRtas[i].IdRespuesta == idRespuesta && listaRtas[i].Correcta == true)           
@@ -57,21 +57,19 @@ public class Juego
        {
             cantidadPreguntasCorrectas++;
             PuntajeActual += 5;
-            
-            for(int a = 0; a < preguntas.Count ;a++)
+            for(int a = 1; a < preguntas.Count ;a++)
             {
-                if (preguntas[a].IdPregunta == idPregunta)
-                {
-                    indice = a;
-                }
+                preguntas[a].pos = preguntas[a].IdPregunta--;
+                if(idPregunta == preguntas[a].pos + 1)
+                preguntas.RemoveAt(a);
             } 
-            preguntas.RemoveAt(indice);
        }
-       return esCorrecta;
+       return esCorrecta; 
     }
-   /* public static void RegistrarJuego(string usname, int pts, DateTime fh)
+    /*public static void RegistrarJuego(string usname, int pts, DateTime fh)
     {
         DB.InsertarPuntajes(usname, pts, fh);        
     }
     */
+    
 }
