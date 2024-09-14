@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/cococartera/Downloads/TP_7_BENDOV_EULMESEKIAN_KALIK/Preguntados_Kalik_Eulmesekian_BENDOV.csproj": {}
+    "C:\\Users\\Mateo\\Desktop\\Programacion\\3er bim\\TP_7_BENDOV_EULMESEKIAN_KALIK\\Preguntados_Kalik_Eulmesekian_BENDOV.csproj": {}
   },
   "projects": {
-    "/Users/cococartera/Downloads/TP_7_BENDOV_EULMESEKIAN_KALIK/Preguntados_Kalik_Eulmesekian_BENDOV.csproj": {
+    "C:\\Users\\Mateo\\Desktop\\Programacion\\3er bim\\TP_7_BENDOV_EULMESEKIAN_KALIK\\Preguntados_Kalik_Eulmesekian_BENDOV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/cococartera/Downloads/TP_7_BENDOV_EULMESEKIAN_KALIK/Preguntados_Kalik_Eulmesekian_BENDOV.csproj",
+        "projectUniqueName": "C:\\Users\\Mateo\\Desktop\\Programacion\\3er bim\\TP_7_BENDOV_EULMESEKIAN_KALIK\\Preguntados_Kalik_Eulmesekian_BENDOV.csproj",
         "projectName": "Preguntados_Kalik_Eulmesekian_BENDOV",
-        "projectPath": "/Users/cococartera/Downloads/TP_7_BENDOV_EULMESEKIAN_KALIK/Preguntados_Kalik_Eulmesekian_BENDOV.csproj",
-        "packagesPath": "/Users/cococartera/.nuget/packages/",
-        "outputPath": "/Users/cococartera/Downloads/TP_7_BENDOV_EULMESEKIAN_KALIK/obj/",
+        "projectPath": "C:\\Users\\Mateo\\Desktop\\Programacion\\3er bim\\TP_7_BENDOV_EULMESEKIAN_KALIK\\Preguntados_Kalik_Eulmesekian_BENDOV.csproj",
+        "packagesPath": "C:\\Users\\Mateo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mateo\\Desktop\\Programacion\\3er bim\\TP_7_BENDOV_EULMESEKIAN_KALIK\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/cococartera/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Mateo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

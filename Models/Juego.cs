@@ -1,4 +1,3 @@
-using Preguntados_Kalik_Eulmesekian_BENDOV.Models;
 public class Juego
 {
     public static string? Username{get; set;}
@@ -6,7 +5,6 @@ public class Juego
     private static int cantidadPreguntasCorrectas{get; set;}
     private static List<Pregunta>? preguntas{get; set;}
     private static List<Respuesta>? respuestas{get; set;}
-
     public static void InicializarJuego()
     {
         Username = string.Empty;
@@ -27,6 +25,7 @@ public class Juego
         preguntas = DB.ObtenerPreguntas(dificultad, categoria);
         respuestas = DB.ObtenerRespuestas(preguntas);
     }
+
     public static Pregunta ObtenerProximaPregunta()
     {   if(preguntas.Count > 0)
         {
@@ -38,38 +37,41 @@ public class Juego
         else 
             return null;
     }
+
+
+
     public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta)
     {
         return DB.ObtenerRtasXPreg(idPregunta);
     }
     public static bool VerificarRespuesta(int idPregunta, int idRespuesta)
     {
-       List<Respuesta> listaRtas = DB.ObtenerRtasXPreg(idPregunta);
-       bool esCorrecta = false;
-       int i = 0;
-       do
-       {
+        List<Respuesta> listaRtas = DB.ObtenerRtasXPreg(idPregunta);
+        bool esCorrecta = false;
+        int i = 0;
+        int indice = 0;
+
+        do
+        {
             if(listaRtas[i].IdRespuesta == idRespuesta && listaRtas[i].Correcta == true)           
             esCorrecta = true;       
             i++;
-       } while (esCorrecta == false && i < listaRtas.Count);
-       if(esCorrecta)
-       {
+        } while (esCorrecta == false && i < listaRtas.Count);
+        
+        if(esCorrecta)
+        {
             cantidadPreguntasCorrectas++;
             PuntajeActual += 5;
-            for(int a = 1; a < preguntas.Count ;a++)
+        }
+        
+        for(int a = 0; a < preguntas.Count ;a++)
             {
-                preguntas[a].pos = preguntas[a].IdPregunta--;
-                if(idPregunta == preguntas[a].pos + 1)
-                preguntas.RemoveAt(a);
+                if (preguntas[a].IdPregunta == idPregunta)
+                {
+                    indice = a;
+                }
             } 
-       }
-       return esCorrecta; 
+        preguntas.RemoveAt(indice);
+        return esCorrecta;
     }
-    /*public static void RegistrarJuego(string usname, int pts, DateTime fh)
-    {
-        DB.InsertarPuntajes(usname, pts, fh);        
-    }
-    */
-    
 }

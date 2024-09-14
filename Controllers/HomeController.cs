@@ -25,10 +25,6 @@ public class HomeController : Controller
         ViewBag.Categorias = Juego.ObtenerCategorias();
         return View();
     }
-    public IActionResult Ruleta ()
-    {
-        return View();
-    }
     
     [HttpPost]
     public IActionResult Comenzar(string Username, int dificultad, int categoria)
@@ -53,6 +49,7 @@ public class HomeController : Controller
             ViewBag.Puntos = Juego.PuntajeActual;
             ViewBag.ListaRtas = Juego.ObtenerProximasRespuestas(pregunta.IdPregunta);
             ViewBag.Preguntas = pregunta;
+            ViewBag.Categorias = Juego.ObtenerCategorias();
         }
         return View("Jugar");
     }
