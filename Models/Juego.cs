@@ -2,7 +2,8 @@ public class Juego
 {
     public static string? Username{get; set;}
     public static int PuntajeActual{get; set;}
-    private static int cantidadPreguntasCorrectas{get; set;}
+    public static int cantidadPreguntasCorrectas{get; set;}
+    public static int cantidadPreguntasContestadas{get;set;}
     private static List<Pregunta>? preguntas{get; set;}
     private static List<Respuesta>? respuestas{get; set;}
     public static void InicializarJuego()
@@ -10,6 +11,7 @@ public class Juego
         Username = string.Empty;
         PuntajeActual = 0;
         cantidadPreguntasCorrectas = 0;
+        cantidadPreguntasContestadas = 0;
     }
     public static List<Categoria> ObtenerCategorias()
     {
@@ -72,6 +74,7 @@ public class Juego
                 }
             } 
         preguntas.RemoveAt(indice);
+        cantidadPreguntasContestadas++;
         return esCorrecta;
     }
 }

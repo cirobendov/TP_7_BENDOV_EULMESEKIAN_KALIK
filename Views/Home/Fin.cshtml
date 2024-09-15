@@ -1,1 +1,27 @@
-<h1> EPPICARDOO PAAA TERMINASTEEEE</h1>
+<section class="fin">
+
+<div class="contenedor-estadisticas">
+    <h1>FIN DEL JUEGO</h1>
+
+        <div class="estadisticas">
+            <h2>
+                <span style="color: white; text-decoration: underline;">Jugador:</span>
+                <span style="color: #198754;">‎ @ViewBag.Username</span>
+            <h2>
+                <span style="color: white; text-decoration: underline;">Puntaje total:</span>
+                <span style="color: #198754;">‎ @ViewBag.Puntos</span>
+            </h2>
+
+            <h2>
+                <span style="color: white; text-decoration: underline;">Total corrctas:</span>
+                <span style="color: #198754;">‎ @ViewBag.Correctas de @ViewBag.TotalPreguntas</span>
+
+            </h2>
+        </div>
+
+        <a href='@Url.Action("Index")'> <button type="button" class="btn btn-outline-light">VOLVER AL INICIO</button> </a> 
+</div>
+    
+
+
+</section>

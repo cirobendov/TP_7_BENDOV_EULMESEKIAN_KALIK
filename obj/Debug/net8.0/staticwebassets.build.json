@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RB6TyJk2EC5EcCzQats0gfhPDOWQZM9q3NF+/bMpFrQ=",
+  "Hash": "3UdUd9e9CtN1Tqg0jvF1gnpNCu5dqPEXPNKuNEycZAQ=",
   "Source": "Preguntados_Kalik_Eulmesekian_BENDOV",
   "BasePath": "_content/Preguntados_Kalik_Eulmesekian_BENDOV",
   "Mode": "Default",
@@ -186,6 +186,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\libertadores.png"
+    },
+    {
+      "Identity": "C:\\Users\\Mateo\\Desktop\\Programacion\\3er bim\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\pickle.cur",
+      "SourceId": "Preguntados_Kalik_Eulmesekian_BENDOV",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mateo\\Desktop\\Programacion\\3er bim\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\",
+      "BasePath": "_content/Preguntados_Kalik_Eulmesekian_BENDOV",
+      "RelativePath": "img/pickle.cur",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\pickle.cur"
     },
     {
       "Identity": "C:\\Users\\Mateo\\Desktop\\Programacion\\3er bim\\TP_7_BENDOV_EULMESEKIAN_KALIK\\wwwroot\\img\\pickle.png",

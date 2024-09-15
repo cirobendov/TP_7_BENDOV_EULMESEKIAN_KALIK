@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Preguntados_Kalik_Eulmesekian_BENDOV.Models;
 
 namespace Preguntados_Kalik_Eulmesekian_BENDOV.Controllers;
-
+[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -35,13 +35,24 @@ public class HomeController : Controller
         else 
             return RedirectToAction("ConfigurarJuego");     
     }
+
+    public IActionResult Fin()
+    {
+        ViewBag.Username = Juego.Username;
+        ViewBag.Puntos = Juego.PuntajeActual;
+        ViewBag.Correctas = Juego.cantidadPreguntasCorrectas;
+        ViewBag.TotalPreguntas = Juego.cantidadPreguntasContestadas;
+        return View();
+    }
+
+
     public IActionResult Jugar()
     {
         Pregunta pregunta = Juego.ObtenerProximaPregunta();
         if(pregunta == null)
         {
            // Juego.RegistrarJuego(Juego.Username, Juego.PuntajeActual, DateTime.Now);
-            return View("Fin");
+            return RedirectToAction("Fin");
         }          
         else
         {
